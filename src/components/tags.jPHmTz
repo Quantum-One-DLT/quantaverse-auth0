@@ -1,0 +1,5 @@
+loaded	Highlight.js	/^    this.state = { loaded: false };$/;"	p	class:state
+state	Highlight.js	/^    this.state = { loaded: false };$/;"	c
+children	Highlight.js	/^  children: PropTypes.node.isRequired,$/;"	p	class:Highlight.propTypes
+language	Highlight.js	/^  language: PropTypes.string,$/;"	p	class:Highlight.propTypes
+language	Highlight.js	/^  language: "json",$/;"	p	class:Highlight.defaultProps

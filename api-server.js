@@ -8,8 +8,8 @@ const authConfig = require("./src/auth_config.json");
 
 const app = express();
 
-const port = process.env.API_PORT || 3001;
-const appPort = process.env.SERVER_PORT || 3000;
+const port = process.env.API_PORT || 3003;
+const appPort = process.env.SERVER_PORT || 3002;
 const appOrigin = authConfig.appOrigin || `http://localhost:${appPort}`;
 
 if (
@@ -23,6 +23,21 @@ if (
 
   process.exit();
 }
+
+function base64URLEncode(str) {
+    return str.toString('base64')
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=/g, '');
+}
+var verifier = base64URLEncode(crypto.randomBytes(32));
+
+// Dependency: Node.js crypto module
+// https://nodejs.org/api/crypto.html#crypto_crypto
+function sha256(buffer) {
+    return crypto.createHash('sha256').update(buffer).digest();
+}
+var challenge = base64URLEncode(sha256(verifier));
 
 app.use(morgan("dev"));
 app.use(helmet());
