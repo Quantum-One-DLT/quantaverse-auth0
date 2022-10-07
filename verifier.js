@@ -22,3 +22,24 @@ var challenge = base64URLEncode(sha256(verifier));
   state={abc1234}">
   Sign In
   </a> 
+
+var axios = require("axios").default;
+
+var options = {
+  method: 'POST',
+  url: 'https://dev-ow4wccii.us.auth0.com/oauth/token',
+  headers: {'content-type': 'application/x-www-form-urlencoded'},
+  data: new URLSearchParams({
+    grant_type: 'authorization_code',
+    client_id: 'jC2Jwb5ebKMHg1Joyv0jvq8bXBlA6r9I',
+    code_verifier: 'YOUR_GENERATED_CODE_VERIFIER',
+    code: 'YOUR_AUTHORIZATION_CODE',
+    redirect_uri: 'http://localhost:3002'
+  })
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+});
