@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
 const authConfig = require("./src/auth_config.json");
+const crypto = require("crypto");
 
 const app = express();
 
@@ -30,14 +31,18 @@ function base64URLEncode(str) {
         .replace(/\//g, '_')
         .replace(/=/g, '');
 }
-var verifier = base64URLEncode(crypto.randomBytes(32));
 
-// Dependency: Node.js crypto module
-// https://nodejs.org/api/crypto.html#crypto_crypto
+var verifier = base64URLEncode(crypto.randomBytes(32));
+console.log("code_verifier: ", verifier)
+
+if(verifier){
+    var challenge = base64URLEncode(sha256(verifier));
+    console.log("code_challenge: ",challenge)
+}
+
 function sha256(buffer) {
     return crypto.createHash('sha256').update(buffer).digest();
 }
-var challenge = base64URLEncode(sha256(verifier));
 
 app.use(morgan("dev"));
 app.use(helmet());

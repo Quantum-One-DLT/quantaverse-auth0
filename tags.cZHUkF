@@ -1,6 +1,0 @@
-base64URLEncode	verifier.js	/^function base64URLEncode(str) {$/;"	f
-sha256	verifier.js	/^function sha256(buffer) {$/;"	f
-contact	verifier.js	/^  &scope={contact:read}$/;"	p	class:https
-sha256	api-server.js	/^function sha256(buffer) {$/;"	f
-challenge	api-server.js	/^var challenge = base64URLEncode(sha256(verifier));$/;"	v
-contact	api-server.js	/^  &scope={contact:read}$/;"	p	class:https

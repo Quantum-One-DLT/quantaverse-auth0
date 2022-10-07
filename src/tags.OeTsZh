@@ -1,5 +1,0 @@
-domain	index.js	/^  domain: config.domain,$/;"	p	class:const
-clientId	index.js	/^  clientId: config.clientId,$/;"	p	class:const
-const	index.js	/^const providerConfig = {$/;"	c
-registerValidSW	serviceWorker.js	/^function registerValidSW(swUrl, config) {$/;"	f
-checkValidServiceWorker	serviceWorker.js	/^function checkValidServiceWorker(swUrl, config) {$/;"	f

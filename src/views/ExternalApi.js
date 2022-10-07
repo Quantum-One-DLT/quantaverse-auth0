@@ -7,7 +7,6 @@ import Loading from "../components/Loading";
 
 export const ExternalApiComponent = () => {
   const { apiOrigin = "http://localhost:3003", audience } = getConfig();
-
   const [state, setState] = useState({
     showResult: false,
     apiMessage: "",

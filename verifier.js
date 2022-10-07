@@ -13,9 +13,12 @@ function sha256(buffer) {
 }
 var challenge = base64URLEncode(sha256(verifier));
 
-https://app.fractal.id/authorize
-  ?client_id={rZ0cAmPpY2SPgF4bXqBrzndqoTzk1EYsq4RtQ1fNhe0}
-  &redirect_uri={https://quantumone.network/callback}
-  &response_type=code
-  &scope={contact:read}
-  &state={abc1234}
+<a href="https://app.fractal.id/authorize?
+  response_type=code&
+  code_challenge=CODE_CHALLENGE&
+  code_challenge_method=s256&
+  client_id=rZ0cAmPpY2SPgF4bXqBrzndqoTzk1EYsq4RtQ1fNhe0&
+  redirect_uri={https://quantumone.network/oauth/callback&
+  state={abc1234}">
+  Sign In
+  </a> 
