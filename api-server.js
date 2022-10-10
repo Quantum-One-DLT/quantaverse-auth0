@@ -81,11 +81,4 @@ var options = {
   })
 };
 
-axios.request(options).then(function (response) {
-  console.log(response.data);
-}).catch(function (error) {
-  console.error(error);
-  return response.data;
-});
-
 app.listen(port, () => console.log(`API Server listening on port ${port}`));
