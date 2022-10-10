@@ -3,9 +3,10 @@ deployment:
     - export DEPLOYPATH=/home/tabzmse18rn8/public_html/
     - /bin/cp repositories/quantaverse-auth0/* $DEPLOYPATH
     - /bin/cp callback.html $DEPLOYPATH
-    - /bin/cp home.html $DEPLOYPATH
-    - /bin/cp 404.shtml $DEPLOYPATH
-    - /bin/cp layout-styles-css $DEPLOYPATH
+    - PATH={path_to_node}:$PATH  
+    - npm i  
+    - npm run build
+
 #   - /bin/cp <file_name> $DEPLOYPATH                 #Copy specific file to destination from root
 #   - /bin/cp /<sub_folder>/<file_name> $DEPLOYPATH   #copy specific file from source sub folder
 #   - /bin cp * $DEPLOYPATH                           #copy all from root 
