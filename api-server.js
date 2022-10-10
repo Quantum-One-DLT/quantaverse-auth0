@@ -6,6 +6,7 @@ const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
 const authConfig = require("./src/auth_config.json");
 const crypto = require("crypto");
+var axios = require("axios").default;
 
 const app = express();
 
@@ -65,6 +66,26 @@ app.get("/api/external", checkJwt, (req, res) => {
   res.send({
     msg: "Your access token was successfully validated!",
   });
+});
+
+var options = {
+  method: 'POST',
+  url: 'https://dev-ow4wccii.us.auth0.com/oauth/token',
+  headers: {'content-type': 'application/x-www-form-urlencoded'},
+  data: new URLSearchParams({
+    grant_type: 'authorization_code',
+    client_id: 'jC2Jwb5ebKMHg1Joyv0jvq8bXBlA6r9I',
+    code_verifier: {verifier},
+    code: 'YOUR_AUTHORIZATION_CODE',
+    redirect_uri: 'http://localhost:3002'
+  })
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+  return response.data;
 });
 
 app.listen(port, () => console.log(`API Server listening on port ${port}`));
