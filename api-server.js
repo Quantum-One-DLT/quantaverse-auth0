@@ -10,8 +10,8 @@ var axios = require("axios").default;
 
 const app = express();
 
-const port = process.env.API_PORT || 3003;
-const appPort = process.env.SERVER_PORT || 3002;
+const port = process.env.API_PORT || 3002;
+const appPort = process.env.SERVER_PORT || 3001;
 const appOrigin = authConfig.appOrigin || `http://localhost:${appPort}`;
 
 if (
@@ -77,7 +77,7 @@ var options = {
     client_id: 'jC2Jwb5ebKMHg1Joyv0jvq8bXBlA6r9I',
     code_verifier: {verifier},
     code: 'YOUR_AUTHORIZATION_CODE',
-    redirect_uri: 'http://localhost:3002'
+    redirect_uri: 'http://localhost:3001'
   })
 };
 

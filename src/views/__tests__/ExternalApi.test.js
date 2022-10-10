@@ -15,7 +15,7 @@ describe("The ExternalApi component", () => {
     getConfig.mockReturnValue({
       domain: "test-domain.com",
       clientId: "123",
-      apiOrigin: "http://localhost:3003",
+      apiOrigin: "http://localhost:3002",
       audience: "test-audience",
     });
 
@@ -52,7 +52,7 @@ describe("The ExternalApi component", () => {
     getConfig.mockReturnValue(() => ({
       domain: "test-domain.com",
       clientId: "123",
-      apiOrigin: "http://localhost:3003",
+      apiOrigin: "http://localhost:3002",
     }));
 
     render(<ExternalApiComponent />);

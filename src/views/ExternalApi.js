@@ -6,7 +6,7 @@ import { getConfig } from "../config";
 import Loading from "../components/Loading";
 
 export const ExternalApiComponent = () => {
-  const { apiOrigin = "http://localhost:3003", audience } = getConfig();
+  const { apiOrigin = "http://localhost:3002", audience } = getConfig();
   const [state, setState] = useState({
     showResult: false,
     apiMessage: "",
@@ -118,7 +118,7 @@ export const ExternalApiComponent = () => {
         </p>
 
         <p>
-          This will call a local API on port 3003 that would have been started
+          This will call a local API on port 3002 that would have been started
           if you run <code>npm run dev</code>. An access token is sent as part
           of the request's `Authorization` header and the API will validate it
           using the API's audience value.

@@ -38,7 +38,7 @@ var options = {
     client_id: 'rZ0cAmPpY2SPgF4bXqBrzndqoTzk1EYsq4RtQ1fNhe0',
     code_verifier: 'YOUR_GENERATED_CODE_VERIFIER',
     code: 'YOUR_AUTHORIZATION_CODE',
-    redirect_uri: 'http://localhost:3002'
+    redirect_uri: 'http://localhost:3001'
   })
 };
 
