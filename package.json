@@ -1,7 +1,8 @@
 {
-  "name": "auth0-react-sample",
+  "name": "Quantum One",
   "version": "0.1.0",
   "private": true,
+  "homepage": "quantumone.network",
   "scripts": {
     "start": "npm-run-all --parallel spa api-server",
     "build": "react-scripts build",
