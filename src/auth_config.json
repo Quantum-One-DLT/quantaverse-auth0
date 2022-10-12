@@ -2,6 +2,6 @@
   "domain": "login.quantumone.network",
   "clientId": "JYVFOmjyocJdtxzfMiRvsOBMDDt21vHd",
   "audience": "https://dev-ow4wccii.us.auth0.com/api/v2/",
-  "appOrigin": "https://quantumone.network/",
+  "appOrigin": "https://login.quantumone.network/",
   "apiOrigin": "https://app.fractal.id/"
 }
