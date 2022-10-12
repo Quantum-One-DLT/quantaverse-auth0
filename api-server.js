@@ -74,10 +74,10 @@ var options = {
   headers: {'content-type': 'application/x-www-form-urlencoded'},
   data: new URLSearchParams({
     grant_type: 'authorization_code',
-    client_id: 'jC2Jwb5ebKMHg1Joyv0jvq8bXBlA6r9I',
+    client_id: 'JYVFOmjyocJdtxzfMiRvsOBMDDt21vHd',
     code_verifier: {verifier},
     code: 'YOUR_AUTHORIZATION_CODE',
-    redirect_uri: 'http://localhost:3001'
+    redirect_uri: 'http://localhost:3001/callback'
   })
 };
 
