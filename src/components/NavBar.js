@@ -71,7 +71,7 @@ const NavBar = () => {
                 <NavItem>
                   <Button
                     id="qsLoginBtn"
-                    color="primary"
+                    color="secondary"
                     className="btn-margin"
                     onClick={() => loginWithRedirect()}
                   >
